@@ -4,8 +4,9 @@
 body{
     @apply text-gray-600;
 }
+
 .header{
-    @apply px-5 shadow-lg grid grid-cols-6 grid-rows-2 w-full gap-1 items-center sm:justify-between sm:grid-rows-1 sm:items-center;
+    @apply w-full fixed h-auto z-20 bg-white px-5 shadow-lg grid grid-cols-6 grid-rows-2  gap-1 items-center sm:justify-between sm:grid-rows-1 sm:items-center ;
 }
 
 /*logo*/
@@ -30,23 +31,31 @@ body{
 
 /* links */
 .link{
-    @apply mx-1  transition hover:text-orange-400 active:text-orange-400  capitalize;
+    @apply mx-1  transition hover:text-orange-400 active:text-orange-400  capitalize sm:text-xs;
 }
 
 /*hero section */
 .hero{
     background:linear-gradient(70deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("./img/hero.jpg");
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-    @apply bg-no-repeat bg-cover h-96 w-full bg-black flex items-center justify-center flex-col md:h-[80vh];
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    @apply bg-no-repeat bg-cover h-96 w-full bg-black flex items-center justify-center flex-col lg:h-[80vh];
 }
 .jumbo{
     /* background:linear-gradient(70deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("./img/jumbo.png") no-repeat;
     background-size: cover; */
     @apply bg-[url("./img/jumbo.png")] bg-right-bottom bg-no-repeat bg-cover  h-52 flex justify-center items-center md:bg-right;
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    /* clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); */
 }
 
 /* divider*/
 .divider{
-    @apply w-12 bg-orange-400 p-1 my-1;
+    @apply w-12 bg-orange-400 py-[2px]  my-1;
+}
+
+/* button */
+.btn{
+  @apply  rounded-full px-6 py-2 w-fit capitalize shadow-sm border-none transition-all bg-orange-400 text-white  hover:bg-black text-sm;
+}
+.btn-blue{
+    @apply rounded-md py-1 bg-blue-500 hover:bg-blue-400 transition; 
 }

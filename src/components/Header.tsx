@@ -6,7 +6,7 @@ import Search from './Search';
 
 const Header= () => {
   return (
-    <header className='header container mx-auto'>
+    <header className="header">
       <Link className="logo" to={'/'}>
         <img className='w-14' src={logo} alt="logo" />
       </Link>

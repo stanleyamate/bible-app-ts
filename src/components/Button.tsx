@@ -5,6 +5,7 @@ interface buttonProps extends React.HTMLAttributes<HTMLButtonElement>{
     children?: ReactNode;
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
     type?: void;
+    className?: string;
     action?:() => void;
 
 
@@ -15,7 +16,7 @@ const Button = (props: buttonProps) => {
   return (
     <button {...props}
     type={props.type? props.type : 'button'}
-    className="rounded-full px-3 py-2 capitalize shadow-sm border-none transition-all bg-orange-400 text-white  hover:bg-black text-sm"
+    className={props.className? `btn ${props.className}`:'btn'}
     >{props.children}</button>
   )
 }
