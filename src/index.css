@@ -16,12 +16,11 @@ body{
 }
 
 /* search form */
-
 .form{
     @apply col-start-1 col-end-7 sm:col-start-2 sm:col-end-5 sm:row-end-1;
 }
 .search{
-    @apply  border h-8 px-4 py-1 rounded-lg w-full outline-none active:border-orange-400 focus:border-orange-400 ;
+    @apply  border h-8 px-4 py-1 rounded-lg w-full outline-none active:border-orange-400 focus:border-orange-400 placeholder:text-sm;
 }
 
 /* nav bar*/
@@ -40,6 +39,7 @@ body{
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
     @apply bg-no-repeat bg-cover h-96 w-full bg-black flex items-center justify-center flex-col lg:h-[80vh];
 }
+
 .jumbo{
     /* background:linear-gradient(70deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("./img/jumbo.png") no-repeat;
     background-size: cover; */
@@ -52,10 +52,15 @@ body{
     @apply w-12 bg-orange-400 py-[2px]  my-1;
 }
 
-/* button */
+/* buttons */
 .btn{
   @apply  rounded-full px-6 py-2 w-fit capitalize shadow-sm border-none transition-all bg-orange-400 text-white  hover:bg-black text-sm;
 }
 .btn-blue{
     @apply rounded-md py-1 bg-blue-500 hover:bg-blue-400 transition border-none; 
+}
+
+/* card*/
+.card{
+  @apply border bg-white flex flex-col justify-center shadow-lg p-3 rounded-md overflow-hidden relative;
 }
