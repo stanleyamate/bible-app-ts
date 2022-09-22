@@ -57,5 +57,5 @@ body{
   @apply  rounded-full px-6 py-2 w-fit capitalize shadow-sm border-none transition-all bg-orange-400 text-white  hover:bg-black text-sm;
 }
 .btn-blue{
-    @apply rounded-md py-1 bg-blue-500 hover:bg-blue-400 transition; 
+    @apply rounded-md py-1 bg-blue-500 hover:bg-blue-400 transition border-none; 
 }

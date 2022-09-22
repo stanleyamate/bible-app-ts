@@ -7,5 +7,6 @@ export const Animations = () =>{
       <Skeleton animation="wave" className="w-[90%]"/>
       <Skeleton animation="wave"  className="w-[90%]" height={15}/>
       <Skeleton animation="wave"  className="w-[90%]" height={15}/>
+      <Skeleton animation="wave"  width={80} height={50}/>
     </div>
   );}
