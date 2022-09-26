@@ -1,23 +1,22 @@
 import React,{ReactNode} from 'react'
 import { Link } from 'react-router-dom'
 
-interface buttonProps extends React.HTMLAttributes<HTMLButtonElement>{
+interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement>{
     children?: ReactNode;
-    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-    type?: void;
+    // onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
     className?: string;
+    direction?: string;
     action?:() => void;
 
 
     // any props that come into the component
 }
 
-const Button = (props: buttonProps) => {
+const Button = (props: LinkProps) => {
   return (
-    <button {...props}
-    type={props.type? props.type : 'button'}
+    <Link {...props} to={props.direction?`${props.direction}`: '/'}
     className={props.className? `btn ${props.className}`:'btn'}
-    >{props.children}</button>
+    >{props.children}</Link>
   )
 }
 

@@ -1,0 +1,692 @@
+.eb-container {
+    /* HTML5 display-role reset for older browsers */
+    font-size: 18px;
+    font-family: "CharisSIL", serif;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .eb-container html, .eb-container body, .eb-container div, .eb-container span, .eb-container applet, .eb-container object, .eb-container iframe,
+  .eb-container h1, .eb-container h2, .eb-container h3, .eb-container h4, .eb-container h5, .eb-container h6, .eb-container p, .eb-container blockquote, .eb-container pre,
+  .eb-container a, .eb-container abbr, .eb-container acronym, .eb-container address, .eb-container big, .eb-container cite, .eb-container code,
+  .eb-container del, .eb-container dfn, .eb-container em, .eb-container img, .eb-container ins, .eb-container kbd, .eb-container q, .eb-container s, .eb-container samp,
+  .eb-container small, .eb-container strike, .eb-container strong, .eb-container sub, .eb-container sup, .eb-container tt, .eb-container var,
+  .eb-container b, .eb-container u, .eb-container i, .eb-container center,
+  .eb-container dl, .eb-container dt, .eb-container dd, .eb-container ol, .eb-container ul, .eb-container li,
+  .eb-container fieldset, .eb-container form, .eb-container label, .eb-container legend,
+  .eb-container table, .eb-container caption, .eb-container tbody, .eb-container tfoot, .eb-container thead, .eb-container tr, .eb-container th, .eb-container td,
+  .eb-container article, .eb-container aside, .eb-container canvas, .eb-container details, .eb-container embed,
+  .eb-container figure, .eb-container figcaption, .eb-container footer, .eb-container header, .eb-container hgroup,
+  .eb-container menu, .eb-container nav, .eb-container output, .eb-container ruby, .eb-container section, .eb-container summary,
+  .eb-container time, .eb-container mark, .eb-container audio, .eb-container video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  
+  .eb-container article, .eb-container aside, .eb-container details, .eb-container figcaption, .eb-container figure,
+  .eb-container footer, .eb-container header, .eb-container hgroup, .eb-container menu, .eb-container nav, .eb-container section {
+    display: block;
+  }
+  
+  .eb-container ol, .eb-container ul {
+    list-style: none;
+  }
+  
+  .eb-container blockquote, .eb-container q {
+    quotes: none;
+  }
+  
+  .eb-container blockquote:before, .eb-container blockquote:after,
+  .eb-container q:before, .eb-container q:after {
+    content: '';
+    content: none;
+  }
+  
+  .eb-container table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  .eb-container * {
+    background: none;
+  }
+  
+  .eb-container .c {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  
+  .eb-container .ca {
+    font-style: italic;
+    font-weight: normal;
+    color: #999999;
+  }
+  
+  .eb-container .ca:before {
+    content: "(";
+  }
+  
+  .eb-container .ca:after {
+    content: ")" !important;
+  }
+  
+  .eb-container .cl {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .eb-container .cd {
+    margin-left: 1em;
+    margin-right: 1em;
+    font-style: italic;
+  }
+  
+  .eb-container sup[class^=v] {
+    color: black;
+    font-size: .7em;
+    letter-spacing: -.03em;
+    vertical-align: 0.25em;
+    line-height: 0;
+    font-family: "Helvetica", sans-serif;
+    font-weight: bold;
+    top: inherit;
+  }
+  
+  .eb-container sup[class^=v]:after {
+    content: "\a0";
+  }
+  
+  .eb-container sup + sup:before {
+    content: "\a0";
+  }
+  
+  .eb-container .va {
+    font-style: italic;
+  }
+  
+  .eb-container .va:before {
+    content: "(";
+  }
+  
+  .eb-container .va:after {
+    content: ")" !important;
+  }
+  
+  .eb-container .xo {
+    font-weight: bold;
+  }
+  
+  .eb-container .xk {
+    font-style: italic;
+  }
+  
+  .eb-container .xq {
+    font-style: italic;
+  }
+  
+  .eb-container .notelink {
+    text-decoration: underline;
+    padding: .1em;
+  }
+  
+  .eb-container .notelink, .eb-container .notelink:hover, .eb-container .notelink:active, .eb-container .notelink:visited {
+    color: #8c8c8c;
+  }
+  
+  .eb-container .notelink sup {
+    font-size: .7em;
+    letter-spacing: -.03em;
+    vertical-align: 0.25em;
+    line-height: 0;
+    font-family: "Helvetica", sans-serif;
+    font-weight: bold;
+  }
+  
+  .eb-container .notelink + sup:before {
+    content: "\a0";
+  }
+  
+  .eb-container .f {
+    display: block;
+  }
+  
+  .eb-container .fr {
+    font-weight: bold;
+  }
+  
+  .eb-container .fk {
+    font-style: italic;
+    font-variant: small-caps;
+  }
+  
+  .eb-container [class^=fq] {
+    font-style: italic;
+  }
+  
+  .eb-container .fl {
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  .eb-container .fv {
+    color: #737373;
+    font-size: .75em;
+    letter-spacing: -.03em;
+    vertical-align: 0.25em;
+    line-height: 0;
+    font-family: "Helvetica", sans-serif;
+    font-weight: bold;
+  }
+  
+  .eb-container .fv:after {
+    content: "\a0";
+  }
+  
+  .eb-container .h {
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .eb-container [class^=imt] {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .eb-container .imt, .eb-container .imt1,
+  .eb-container .imte, .eb-container .imte1 {
+    font-size: 1.4em;
+  }
+  
+  .eb-container .imt2, .eb-container .imte2 {
+    font-size: 1.3em;
+  }
+  
+  .eb-container .imt3, .eb-container .imte3 {
+    font-size: 1.2em;
+  }
+  
+  .eb-container .imt4, .eb-container .imte4 {
+    font-size: 1.1em;
+  }
+  
+  .eb-container [class^=is] {
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .eb-container [class^="ip"] {
+    text-indent: 1em;
+  }
+  
+  .eb-container .ipi {
+    padding-left: rhythm(1);
+    padding-right: rhythm(1);
+  }
+  
+  .eb-container .im {
+    text-indent: 0;
+  }
+  
+  .eb-container .imi {
+    text-indent: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  
+  .eb-container .ipq {
+    font-style: italic;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  
+  .eb-container .imq {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  
+  .eb-container .ipr {
+    text-align: right;
+    text-indent: 0;
+  }
+  
+  .eb-container [class^=iq] {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  
+  .eb-container .iq2 {
+    text-indent: 1em;
+  }
+  
+  .eb-container [class^=ili] {
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+  
+  .eb-container .ili1 {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  
+  .eb-container .ili2 {
+    margin-left: 2em;
+    margin-right: 1em;
+  }
+  
+  .eb-container .iot {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 1.5em;
+  }
+  
+  .eb-container .io, .eb-container .io1 {
+    margin-left: 1em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .io2 {
+    margin-left: 2em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .io3 {
+    margin-left: 3em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .io4 {
+    margin-left: 4em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .ior {
+    font-style: italic;
+  }
+  
+  .eb-container .iex {
+    text-indent: 1em;
+  }
+  
+  .eb-container .iqt {
+    text-indent: 1em;
+    font-style: italic;
+  }
+  
+  .eb-container [class^=p] {
+    text-indent: 1em;
+  }
+  
+  .eb-container .m {
+    text-indent: 0 !important;
+  }
+  
+  .eb-container .pmo {
+    text-indent: 0;
+    margin-left: 1em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .pm {
+    margin-left: 1em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .pmr {
+    text-align: right;
+  }
+  
+  .eb-container .pmc {
+    margin-left: 1em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .pi {
+    margin-left: 1em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .pi1 {
+    margin-left: 2em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .pi2 {
+    margin-left: 3em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .pi3 {
+    margin-left: 4em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .mi {
+    margin-left: 1em;
+    margin-right: 0em;
+    text-indent: 0;
+  }
+  
+  .eb-container .pc {
+    text-align: center;
+    text-indent: 0;
+  }
+  
+  .eb-container .cls {
+    text-align: right;
+  }
+  
+  .eb-container [class^=li] {
+    padding-left: 1em;
+    text-indent: -1em;
+    margin-left: 1em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .li2 {
+    margin-left: 2em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .li3 {
+    margin-left: 3em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .li4 {
+    margin-left: 4em;
+    margin-right: 0em;
+  }
+  
+  .eb-container [class^=q] {
+    padding-left: 1em;
+    text-indent: -1em;
+    margin-left: 1em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .q2 {
+    margin-left: 1.5em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .q3 {
+    margin-left: 2em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .q4 {
+    margin-left: 2.5em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .qr {
+    text-align: right;
+    font-style: italic;
+  }
+  
+  .eb-container .qc {
+    text-align: center;
+  }
+  
+  .eb-container .qs {
+    font-style: italic;
+    text-align: right;
+  }
+  
+  .eb-container .qa {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1em;
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .qac {
+    margin-left: 0em;
+    margin-right: 0em;
+    padding: 0;
+    text-indent: 0;
+    font-style: italic;
+  }
+  
+  .eb-container .qm2 {
+    margin-left: 1.5em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .qm3 {
+    margin-left: 2em;
+    margin-right: 0em;
+  }
+  
+  .eb-container .bk {
+    font-style: italic;
+  }
+  
+  .eb-container .nd {
+    font-variant: small-caps;
+  }
+  
+  .eb-container .add {
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .eb-container .dc {
+    font-style: italic;
+  }
+  
+  .eb-container .k {
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .eb-container .lit {
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  .eb-container .pn {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .eb-container .sls {
+    font-style: italic;
+  }
+  
+  .eb-container .tl {
+    font-style: italic;
+  }
+  
+  .eb-container .wj {
+    color: #CC0000;
+  }
+  
+  .eb-container .em {
+    font-style: italic;
+  }
+  
+  .eb-container .bd {
+    font-weight: bold;
+  }
+  
+  .eb-container .it {
+    font-style: italic;
+  }
+  
+  .eb-container .bdit {
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .eb-container .no {
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .eb-container .sc {
+    font-variant: small-caps;
+  }
+  
+  .eb-container .qt {
+    font-style: italic;
+  }
+  
+  .eb-container .sig {
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  .eb-container table {
+    width: 100%;
+    display: table;
+  }
+  
+  .eb-container .tr {
+    display: table-row;
+  }
+  
+  .eb-container [class^=th] {
+    font-style: italic;
+    display: table-cell;
+  }
+  
+  .eb-container [class^=thr] {
+    text-align: right;
+    padding-right: 1.5em;
+  }
+  
+  .eb-container [class^=tc] {
+    display: table-cell;
+  }
+  
+  .eb-container [class^=tcr] {
+    text-align: right;
+    padding-right: 1.5em;
+  }
+  
+  .eb-container [class^=mt] {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: normal;
+  }
+  
+  .eb-container .mt, .eb-container .mt1 {
+    font-size: 2.8em;
+  }
+  
+  .eb-container .mt2 {
+    font-size: 1.6em;
+    font-style: italic;
+    font-weight: normal;
+  }
+  
+  .eb-container [class^=ms] {
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: normal;
+  }
+  
+  .eb-container .ms, .eb-container .ms1 {
+    font-size: 1.6em;
+  }
+  
+  .eb-container .ms2 {
+    font-size: 1.5em;
+  }
+  
+  .eb-container .ms3 {
+    font-size: 1.4em;
+  }
+  
+  .eb-container .mr {
+    font-size: .9em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  .eb-container .s, .eb-container .s1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: normal;
+  }
+  
+  .eb-container .s2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: inherit;
+    letter-spacing: normal;
+  }
+  
+  .eb-container .s3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: inherit;
+    letter-spacing: normal;
+  }
+  
+  .eb-container .s4 {
+    text-align: center;
+    font-weight: bold;
+    font-size: inherit;
+    letter-spacing: normal;
+  }
+  
+  .eb-container .sr {
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    font-size: inherit;
+    letter-spacing: normal;
+  }
+  
+  .eb-container .r {
+    font-size: .9em;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: normal;
+  }
+  
+  .eb-container .rq {
+    font-size: .85em;
+    line-height: 1.9;
+    font-style: italic;
+    padding-left: rhythm(0.5);
+    letter-spacing: normal;
+  }
+  
+  .eb-container .d {
+    font-style: italic;
+    text-align: center;
+    font-size: inherit;
+    letter-spacing: normal;
+  }
+  
+  .eb-container .sp {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    font-size: inherit;
+    letter-spacing: normal;
+  }
+  
+  .eb-container [class^=p] + .s, .eb-container [class^=p] + .s1, .eb-container [class^=q] + .s, .eb-container [class^=q] + .s1 {
+    margin-top: 1.5em;
+  }
+  
+  /*# sourceMappingURL=eb-scripture-style.css.map */
+.scripture-styles{font-size:18px;font-family:"Noto Serif",serif;line-height:25px;color:#111;-webkit-font-smoothing:antialiased}.scripture-styles html,.scripture-styles body,.scripture-styles div,.scripture-styles span,.scripture-styles applet,.scripture-styles object,.scripture-styles iframe,.scripture-styles h1,.scripture-styles h2,.scripture-styles h3,.scripture-styles h4,.scripture-styles h5,.scripture-styles h6,.scripture-styles p,.scripture-styles blockquote,.scripture-styles pre,.scripture-styles a,.scripture-styles abbr,.scripture-styles acronym,.scripture-styles address,.scripture-styles big,.scripture-styles cite,.scripture-styles code,.scripture-styles del,.scripture-styles dfn,.scripture-styles em,.scripture-styles img,.scripture-styles ins,.scripture-styles kbd,.scripture-styles q,.scripture-styles s,.scripture-styles samp,.scripture-styles small,.scripture-styles strike,.scripture-styles strong,.scripture-styles sub,.scripture-styles sup,.scripture-styles tt,.scripture-styles var,.scripture-styles b,.scripture-styles u,.scripture-styles i,.scripture-styles center,.scripture-styles dl,.scripture-styles dt,.scripture-styles dd,.scripture-styles ol,.scripture-styles ul,.scripture-styles li,.scripture-styles fieldset,.scripture-styles form,.scripture-styles label,.scripture-styles legend,.scripture-styles table,.scripture-styles caption,.scripture-styles tbody,.scripture-styles tfoot,.scripture-styles thead,.scripture-styles tr,.scripture-styles th,.scripture-styles td,.scripture-styles article,.scripture-styles aside,.scripture-styles canvas,.scripture-styles details,.scripture-styles embed,.scripture-styles figure,.scripture-styles figcaption,.scripture-styles footer,.scripture-styles header,.scripture-styles hgroup,.scripture-styles menu,.scripture-styles nav,.scripture-styles output,.scripture-styles ruby,.scripture-styles section,.scripture-styles summary,.scripture-styles time,.scripture-styles mark,.scripture-styles audio,.scripture-styles video{margin:0;padding:0;border:0;font-family:inherit;vertical-align:baseline}.scripture-styles article,.scripture-styles aside,.scripture-styles details,.scripture-styles figcaption,.scripture-styles figure,.scripture-styles footer,.scripture-styles header,.scripture-styles hgroup,.scripture-styles menu,.scripture-styles nav,.scripture-styles section{display:block}.scripture-styles ol,.scripture-styles ul{list-style:none}.scripture-styles blockquote,.scripture-styles q{quotes:none}.scripture-styles blockquote:before,.scripture-styles blockquote:after,.scripture-styles q:before,.scripture-styles q:after{content:"";content:none}.scripture-styles table{border-collapse:collapse;border-spacing:0}.scripture-styles .c{text-align:center;font-weight:bold;font-size:1.3em}.scripture-styles .ca{font-style:italic;font-weight:normal;color:#777}.scripture-styles .ca:before{content:"("}.scripture-styles .ca:after{content:")" !important}.scripture-styles .cl{text-align:center;font-weight:bold}.scripture-styles .cd{margin-left:1em;margin-right:1em;font-style:italic}.scripture-styles .v,.scripture-styles .vp,.scripture-styles sup[class^="v"]{color:#000;font-size:0.7em;letter-spacing:-0.03em;vertical-align:0.25em;line-height:0;font-family:sans-serif;font-weight:bold;top:inherit}.scripture-styles .v:after,.scripture-styles .vp:after,.scripture-styles sup[class^="v"]:after{content:"\a0"}.scripture-styles sup+sup:before{content:"\a0"}.scripture-styles .va{font-style:italic}.scripture-styles .va:before{content:"("}.scripture-styles .va:after{content:")" !important}.scripture-styles .x{font-size:16px;box-sizing:border-box;display:inline-block;position:relative;padding:0 0.4em;margin:0 0.1em;text-indent:0;text-align:left;border-radius:4px;border:1px solid #dcdcdc}.scripture-styles .xo{font-weight:bold}.scripture-styles .xk{font-style:italic}.scripture-styles .xq{font-style:italic}.scripture-styles .notelink{text-decoration:underline;padding:0.1em}.scripture-styles .notelink,.scripture-styles .notelink:hover,.scripture-styles .notelink:active,.scripture-styles .notelink:visited{color:#6a6a6a}.scripture-styles .notelink sup{font-size:0.7em;letter-spacing:-0.03em;vertical-align:0.25em;line-height:0;font-family:sans-serif;font-weight:bold}.scripture-styles .notelink+sup:before{content:"\a0"}.scripture-styles .f{font-size:16px;display:inline-block;box-sizing:border-box;padding:0 0.4em;margin:0 0.1em;text-indent:0;text-align:left;border-radius:4px;border:1px solid #dcdcdc}.scripture-styles .fr{font-weight:bold}.scripture-styles .fk{font-style:italic;font-variant:small-caps}.scripture-styles [class^="fq"]{font-style:italic}.scripture-styles .fl{font-style:italic;font-weight:bold}.scripture-styles .fv{color:#515151;font-size:0.75em;letter-spacing:-0.03em;vertical-align:0.25em;line-height:0;font-family:sans-serif;font-weight:bold}.scripture-styles .fv:after{content:"\a0"}.scripture-styles .h{text-align:center;font-style:italic}.scripture-styles [class^="imt"],.scripture-styles [class^="is"]{text-align:center;font-weight:bold;font-size:27px;line-height:50px;margin-top:25px;margin-bottom:25px}.scripture-styles [class^="ip"]{text-indent:1em}.scripture-styles .ipi{padding-left:1em;padding-right:1em}.scripture-styles .im{text-indent:0}.scripture-styles .imi{text-indent:0;margin-left:1em;margin-right:1em}.scripture-styles .ipq{font-style:italic;margin-left:1em;margin-right:1em}.scripture-styles .imq{margin-left:1em;margin-right:1em}.scripture-styles .ipr{text-align:right;text-indent:0}.scripture-styles [class^="iq"]{margin-left:1em;margin-right:1em}.scripture-styles .iq2{text-indent:1em}.scripture-styles [class^="ili"]{padding-left:1em;text-indent:-1em}.scripture-styles .ili1{margin-left:1em;margin-right:1em}.scripture-styles .ili2{margin-left:2em;margin-right:1em}.scripture-styles .iot{font-weight:bold;font-size:18px;line-height:25px;margin-top:25px;margin-bottom:0px}.scripture-styles .io,.scripture-styles .io1{margin-left:1em;margin-right:0em}.scripture-styles .io2{margin-left:2em;margin-right:0em}.scripture-styles .io3{margin-left:3em;margin-right:0em}.scripture-styles .io4{margin-left:4em;margin-right:0em}.scripture-styles .ior{font-style:italic}.scripture-styles .iex{text-indent:1em}.scripture-styles .iqt{text-indent:1em;font-style:italic}.scripture-styles [class^="p"]{text-indent:1em}.scripture-styles .m{text-indent:0 !important}.scripture-styles .pmo{text-indent:0;margin-left:1em;margin-right:0em}.scripture-styles .pm{margin-left:1em;margin-right:0em}.scripture-styles .pmr{text-align:right}.scripture-styles .pmc{margin-left:1em;margin-right:0em}.scripture-styles .pi{margin-left:1em;margin-right:0em}.scripture-styles .pi1{margin-left:2em;margin-right:0em}.scripture-styles .pi2{margin-left:3em;margin-right:0em}.scripture-styles .pi3{margin-left:4em;margin-right:0em}.scripture-styles .mi{margin-left:1em;margin-right:0em;text-indent:0}.scripture-styles .pc{text-align:center;text-indent:0}.scripture-styles .cls{text-align:right}.scripture-styles [class^="li"]{padding-left:1em;text-indent:-1em;margin-left:1em;margin-right:0em}.scripture-styles .li2{margin-left:2em;margin-right:0em}.scripture-styles .li3{margin-left:3em;margin-right:0em}.scripture-styles .li4{margin-left:4em;margin-right:0em}.scripture-styles .b{height:25px}.scripture-styles [class^="q"]{padding-left:1em;text-indent:-1em;margin-left:1em;margin-right:0em}.scripture-styles .q2{margin-left:1.5em;margin-right:0em}.scripture-styles .q3{margin-left:2em;margin-right:0em}.scripture-styles .q4{margin-left:2.5em;margin-right:0em}.scripture-styles .qr{text-align:right;font-style:italic}.scripture-styles .qc{text-align:center}.scripture-styles .qs{font-style:italic;text-align:right}.scripture-styles .qa{text-align:center;font-style:italic;font-size:1.1em;margin-left:0em;margin-right:0em}.scripture-styles .qac{margin-left:0em;margin-right:0em;padding:0;text-indent:0;font-style:italic}.scripture-styles .qm2{margin-left:1.5em;margin-right:0em}.scripture-styles .qm3{margin-left:2em;margin-right:0em}.scripture-styles .qt{font-style:italic;text-indent:0;padding:0;margin:0}.scripture-styles .bk{font-style:italic}.scripture-styles .nd{font-variant:small-caps}.scripture-styles .add{font-style:italic}.scripture-styles .dc{font-style:italic}.scripture-styles .k{font-weight:bold;font-style:italic}.scripture-styles .lit{text-align:right;font-weight:bold}.scripture-styles .pn{font-weight:bold;text-decoration:underline}.scripture-styles .sls{font-style:italic}.scripture-styles .tl{font-style:italic}.scripture-styles .wj{color:#cc0000}.scripture-styles .em{font-style:italic}.scripture-styles .bd{font-weight:bold}.scripture-styles .it{font-style:italic}.scripture-styles .bdit{font-weight:bold;font-style:italic}.scripture-styles .no{font-weight:normal;font-style:normal}.scripture-styles .sc{font-variant:small-caps}.scripture-styles .qt{font-style:italic}.scripture-styles .sig{font-weight:normal;font-style:italic}.scripture-styles table{width:100%;display:table}.scripture-styles .tr{display:table-row}.scripture-styles [class^="th"]{font-style:italic;display:table-cell}.scripture-styles [class^="thr"]{text-align:right;padding:0 25px}.scripture-styles [class^="tc"]{display:table-cell}.scripture-styles [class^="tcr"]{text-align:right;padding:0 25px}.scripture-styles [class^="mt"]{text-align:center;font-weight:bold;letter-spacing:normal}.scripture-styles .mt,.scripture-styles .mt1,.scripture-styles .mt2{font-size:40px;line-height:50px;margin-top:25px;margin-bottom:25px}.scripture-styles .mt2{font-size:34px;margin-top:-25px;font-style:italic;font-weight:normal}.scripture-styles [class^="ms"],.scripture-styles .ms,.scripture-styles .ms1,.scripture-styles .ms2,.scripture-styles .ms3{text-align:center;font-weight:bold;font-size:27px;line-height:50px;margin-top:25px;margin-bottom:0px}.scripture-styles .mr{font-size:0.9em;margin-bottom:25px;text-align:center;font-weight:normal;font-style:italic}.scripture-styles .s,.scripture-styles .s1,.scripture-styles .s2,.scripture-styles .s3,.scripture-styles .s4{text-align:center;font-weight:bold;font-style:italic;font-size:inherit;margin-bottom:15px;margin-top:25px}.scripture-styles .sr{font-weight:normal;font-style:italic;text-align:center;font-size:inherit;letter-spacing:normal}.scripture-styles .r{font-size:18px;font-weight:normal;font-style:italic;text-align:center;letter-spacing:normal}.scripture-styles .rq{font-size:inherit;line-height:25px;font-style:italic;text-align:right;letter-spacing:normal}.scripture-styles .d{font-style:italic;text-align:center;font-size:inherit;letter-spacing:normal}.scripture-styles .sp{text-align:left;font-weight:normal;font-style:italic;font-size:inherit;letter-spacing:normal}
+
+/* # sourceMappingURL=scripture-styles.css.map */
