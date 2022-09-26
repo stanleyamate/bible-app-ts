@@ -14,14 +14,7 @@ const Digit = (props:Numprop) => {
             {props.chap?.number}
         </Link>
         }
-            {/* <Link  className="digit" to={`/${props.verse.bibleId}/chapters/${props.verse.id}/verses`}>
-            {props.verse?.id}
-        </Link> */}
-       
-            {/* <Link className="digit" to={`/${props.chap?.bibleId}/passages/${props.chap?.id}`}>
-             {props.chap?.id}
-            </Link> */}
-
+     
         </>
     )
 }

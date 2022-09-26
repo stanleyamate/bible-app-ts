@@ -45,8 +45,10 @@ body{
 .jumbo{
     /* background:linear-gradient(70deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("./img/jumbo.png") no-repeat;
     background-size: cover; */
-    @apply bg-[url("./img/jumbo.png")] bg-right-bottom bg-no-repeat bg-cover  h-64 flex justify-center items-center md:bg-right;
+    background:linear-gradient(70deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("./img/jumbo.jpg");
+    @apply bg-right bg-no-repeat bg-cover  h-64 flex justify-center items-center md:bg-right;
     /* clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); */
+    /* bg-[url("./img/jumbo.jpg")] */
 }
 
 /* divider*/

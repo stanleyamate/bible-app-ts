@@ -7,7 +7,7 @@ import { config } from '../config/axiosConfig';
 const Search = () => {
 
   /* initializing query state */
- const [search, setSearch]= useState<string >('')
+ const [search, setSearch]= useState<string >("")
 
  const [results, setResults]= useState<any[] |null>(null)
 
@@ -18,16 +18,16 @@ const Search = () => {
     e.preventDefault();
     axios.get(baseUrl+`/65bfdebd704a8324-01/search?query=${search}`,config).then(res=>{
       setResults(res.data.data.verses)
-      setSearch('')
+      setSearch("")
       // console.log(res.data.data.verses)
       setClicked(false)
     }).catch (error => console.log(error))
   }
-  
+
   /* mapping throught the search results object */
   const resultList= results?.length?results.map(result =>(
   <Link to={`/${result.bibleId}/verses/${result.id}`} 
-  className="w-full bg-white  p-2 rounded-md block"
+  className="w-full bg-white  p-2 rounded-md block hover:bg-orange-300"
    key={result.id}
    onClick={()=>setClicked(true)}
    >
@@ -46,7 +46,7 @@ const Search = () => {
           setSearch(e.target.value)
           setClicked(false)
           }}/>
-        <div className={clicked?"disable":"w-full flex items-end justify-center flex-col gap-1 border-none md:w-[400px] h-auto top-10  shadow-sm text-sm shadow-gray-600 bg-gray-300 rounded-md absolute z-50 lg:left-[20%]"}>
+        <div className={clicked?"disable":"w-full flex items-end justify-center flex-col gap-1 border-none md:w-[400px] h-auto top-10  shadow-sm text-sm shadow-gray-600 px-1 bg-gray-300 rounded-md absolute z-50 lg:left-[20%]"}>
            {resultList}
         </div>
     </form>

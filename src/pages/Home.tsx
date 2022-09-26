@@ -5,6 +5,7 @@ import Bible from '../components/Bible'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { IBible,BiblesProps } from '../types/Bible.types';
 import bibleService from '../services/bible.service';
+import { Animations } from '../components/Skeletons/BibleSkeleton';
 
 interface bibleProps {
         bibles: BiblesProps
@@ -15,17 +16,27 @@ const Home = () => {
  /* loading state */ 
  const [loading, setLoading] = useState<boolean>(true)
  /* bibles state */
- const [bibles, setBibles] = useState<BiblesProps>()
+ const [bibles, setBibles] = useState<any[]>([])
 
  /* error state */
  const [errObj, setErrObj] = useState<any>({})
+
+        useEffect(() => {
+                if (loading) {
+                        setTimeout(() => {
+                                setLoading(false)
+                        }, 3000)
+                }
+                return () => {
+
+                }
+        }, [])
 
  const fetchAllBibles = () => {
 
    bibleService.getAllBibles()
      .then(res => {
        setBibles(res.data.data);
-      //  localStorage.setItem('bibles', JSON.stringify(bibles));
      })
      .catch(err => {
 
@@ -39,7 +50,12 @@ const Home = () => {
    fetchAllBibles();
 
  }, [])
-
+    const bibleList =bibles.length? bibles
+    .filter((bible:IBible) => bible.language.name =="English")
+    .map((bible:IBible) =>(
+        <Bible key={bible.id} bible={bible}/>
+    
+    )).slice(1, 13):null
  
   return (
     <>
@@ -63,14 +79,19 @@ const Home = () => {
               </p>            
             </div>
           </section>
-          <section className="container mx-auto text-center py-5 flex flex-col items-center justify-center">
-            <AnimationOnScroll animateIn='animate__fadeInUp'>
-              <h3 className="text-lg capitalize md:text-2xl">some<strong className="ml-1 text-orange-400">Bibles</strong></h3>
+          <section className="bg-slate-400 mmx-auto text-center py-5 flex flex-col items-center justify-center ">
+          <AnimationOnScroll animateIn='animate__fadeInUp'>
+              <h3 className="text-lg text-white capitalize md:text-2xl">some english<strong className="ml-1 text-orange-400">Bibles</strong></h3>
             </AnimationOnScroll>
              
-              <div className='divider'></div>
-              <div className="container px-3 mt-4 flex flex-col gap-3 sm:grid sm:grid-cols-2 md:grid-rows-3 md:grid-cols-3 md:my-20 md:grid-rows-2 md:gap-5 ">
-                  {/* <Bible /> */}
+              <div className='divider '></div>
+              <div className="container px-3 mt-4  ">
+                
+                  {loading?<Animations />:
+                   <AnimationOnScroll className='flex flex-col gap-3 sm:grid sm:grid-cols-3 md:grid-rows-3 lg:grid-cols-6 md:my-20 md:grid-rows-2 md:gap-5' animateIn='animate__fadeInUp'>
+                    {bibleList}
+                    </AnimationOnScroll>
+                  }
               </div>
           </section>
           <section className='jumbo'>
