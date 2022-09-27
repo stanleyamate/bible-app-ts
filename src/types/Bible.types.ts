@@ -45,6 +45,14 @@ export interface IVerse {
     content: string
     reference: string
     verseCount: number
+    next: {
+        id: string
+        bookId: string
+      }
+    previous: {
+        id: string,
+        bookId: string
+      }
 }
 export interface IChapProps {
     id: string
